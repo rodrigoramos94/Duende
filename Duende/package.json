@@ -1,0 +1,14 @@
+{
+  "name": "duende",
+  "version": "0.0.0",
+  "description": "Duende",
+  "main": "app.js",
+  "author": {
+    "name": "Rodrigo Ramos"
+  },
+  "dependencies": {
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  }
+}
