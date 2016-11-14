@@ -5,7 +5,7 @@ function index(req, res) {
 exports.index = index;
 ;
 function about(req, res) {
-    res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Your application description page' });
+    res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Description page' });
 }
 exports.about = about;
 ;
