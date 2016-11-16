@@ -1,6 +1,11 @@
 "use strict";
+function login(req, res) {
+    res.render('login', { title: 'Login', year: new Date().getFullYear() });
+}
+exports.login = login;
+;
 function index(req, res) {
-    res.render('index', { title: 'Express', year: new Date().getFullYear() });
+    res.render('index', { title: 'Home', year: new Date().getFullYear() });
 }
 exports.index = index;
 ;

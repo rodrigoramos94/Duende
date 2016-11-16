@@ -1,0 +1,33 @@
+﻿doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title #{title} - CloverElf
+    link(rel='shotcut icon' href='../images/duende-icon.ico')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/style-login.css')
+    script(src='/javascripts/modernizr-2.6.2.js')
+  
+  body(background='../images/fondo1.jpg')
+
+    div#general-box.container
+        div#image-box.container
+            img.img-responsive(src='../images/duende-icon.png' alt='Logo Image')
+        div#login-box.container
+            div.row
+                br
+                h1 LOGIN
+                br
+                form
+                    div.input-group.input-group-lg
+                        span.input-group-addon.glyphicon.glyphicon-user(id='input-username')
+                        input.form-control.input-lg(type='text' id='input-username' placeholder='Username')
+                    br
+                    div.input-group.input-group-lg
+                        span.input-group-addon.glyphicon.glyphicon-lock(id='input-password')
+                        input.form-control(type='password' id='input-password' placeholder='Password')
+                    br
+                    input.btn.btn-lg.btn-success.btn-block(type="submit" id="login" value="Login »")
+                br
+    

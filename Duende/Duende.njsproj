@@ -40,6 +40,10 @@
     <TypeScriptCompile Include="Scripts\typings\stylus\stylus.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="public\images\duende-icon.ico" />
+    <Content Include="public\images\duende-icon.png" />
+    <Content Include="public\images\fondo1.jpg" />
+    <Content Include="public\images\trebol4.png" />
     <Content Include="public\javascripts\bootstrap.js" />
     <Content Include="public\javascripts\bootstrap.min.js" />
     <Content Include="public\javascripts\jquery-1.10.2.intellisense.js" />
@@ -62,12 +66,14 @@
     <Content Include="public\javascripts\jquery-1.10.2.min.map" />
     <Content Include="public\stylesheets\bootstrap.css" />
     <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\style-login.styl" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
     <Content Include="views\contact.jade" />
     <Content Include="views\about.jade" />
     <Content Include="views\index.jade" />
     <Content Include="views\layout.jade" />
+    <Content Include="views\login.jade" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="public\" />

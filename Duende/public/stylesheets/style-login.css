@@ -1,0 +1,29 @@
+body {
+  background-color: #d3d3d3;
+}
+form {
+  max-width: 700px;
+}
+img {
+  margin-left: auto;
+  margin-right: auto;
+}
+#general-box {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 6%;
+  padding: 0px 0px 0px 0px;
+  background-color: rgba(230,230,230,0.3);
+  border-radius: 20px;
+}
+#login-box {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 10px 10px 10px;
+}
+div.row {
+  margin: 0px 20px 0px 20px;
+}
+div.input-group.input-group-lg {
+  width: 100%;
+}

@@ -21,7 +21,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
-app.get('/', routes.index);
+app.get('/', routes.login);
+app.get('/home', routes.index);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 http.createServer(app).listen(app.get('port'), function () {
