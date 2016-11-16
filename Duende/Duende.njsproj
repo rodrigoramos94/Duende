@@ -43,7 +43,10 @@
     <Content Include="public\images\duende-icon.ico" />
     <Content Include="public\images\duende-icon.png" />
     <Content Include="public\images\fondo1.jpg" />
+    <Content Include="public\images\locker-lock-32.png" />
+    <Content Include="public\images\locker-lock-24.png" />
     <Content Include="public\images\trebol4.png" />
+    <Content Include="public\images\user-icon-24.png" />
     <Content Include="public\javascripts\bootstrap.js" />
     <Content Include="public\javascripts\bootstrap.min.js" />
     <Content Include="public\javascripts\jquery-1.10.2.intellisense.js" />

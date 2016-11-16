@@ -11,23 +11,27 @@ html
   
   body(background='../images/fondo1.jpg')
 
-    div#general-box.container
+    div#general-box.container.col-10-xs 
         div#image-box.container
-            img.img-responsive(src='../images/duende-icon.png' alt='Logo Image')
+            img.img-responsive(src='../images/duende-icon.png' alt='Logo Image' width='150px')
+            h1 CloverElf Trading
+            br
         div#login-box.container
             div.row
-                br
-                h1 LOGIN
-                br
+                h2 Login
+                hr
                 form
                     div.input-group.input-group-lg
-                        span.input-group-addon.glyphicon.glyphicon-user(id='input-username')
+                        span.input-group-addon(id='input-username')
+                            img(src='../images/user-icon-24.png' alt='user' width='22px')
                         input.form-control.input-lg(type='text' id='input-username' placeholder='Username')
                     br
                     div.input-group.input-group-lg
-                        span.input-group-addon.glyphicon.glyphicon-lock(id='input-password')
+                        span.input-group-addon(id='input-password')
+                            img(src='../images/locker-lock-24.png' alt='lock' width='22px')
                         input.form-control(type='password' id='input-password' placeholder='Password')
                     br
                     input.btn.btn-lg.btn-success.btn-block(type="submit" id="login" value="Login »")
                 br
-    
+        footer
+            p &copy; #{year} - Cloverelf
