@@ -45,6 +45,14 @@
     <Content Include="public\images\duende-icon.ico" />
     <Content Include="public\images\duende-icon.png" />
     <Content Include="public\images\fondo1.jpg" />
+    <Content Include="public\images\fondo2.jpg" />
+    <Content Include="public\images\fondo3.jpg" />
+    <Content Include="public\images\fondo4.jpg" />
+    <Content Include="public\images\fondo5.jpg" />
+    <Content Include="public\images\fondo6.jpg" />
+    <Content Include="public\images\fondo7.jpg" />
+    <Content Include="public\images\fondo8.jpg" />
+    <Content Include="public\images\fondo9.jpg" />
     <Content Include="public\images\locker-lock-32.png" />
     <Content Include="public\images\locker-lock-24.png" />
     <Content Include="public\images\trebol4.png" />

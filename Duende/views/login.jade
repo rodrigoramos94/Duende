@@ -9,12 +9,13 @@ html
     link(rel='stylesheet', type='text/css', href='/stylesheets/style-login.css')
     script(src='/javascripts/modernizr-2.6.2.js')
   
-  body(background='../images/fondo1.jpg')
+  body
+
 
     div#general-box.container.col-10-xs 
         div#image-box.container
             img.img-responsive(src='../images/duende-icon.png' alt='Logo Image' width='150px')
-            h1 CloverElf Trading
+            h1 Cloverelf Trading
             br
         div#login-box.container
             div.row
@@ -33,5 +34,6 @@ html
                     br
                     input.btn.btn-lg.btn-success.btn-block(type="submit" id="login" value="Login »")
                 br
-        footer
-            p &copy; #{year} - Cloverelf
+    footer
+        p &copy; #{year} - Cloverelf
+

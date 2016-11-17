@@ -1,5 +1,10 @@
 body {
+  background: url("../images/fondo9.jpg") no-repeat center center fixed;
   background-position: adjust;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 form {
   max-width: 700px;
@@ -10,8 +15,9 @@ img {
 }
 footer {
   color: #fff;
-  position: absolute;
-  margin-top: 13%;
+  position: fixed;
+  bottom: 0px;
+  left: 20px;
 }
 #general-box {
   width: 100%;
@@ -25,9 +31,10 @@ footer {
   color: #fff;
 }
 #login-box {
-  background-color: rgba(230,230,230,0.3);
+  background-color: rgba(255,255,255,0.5);
   border-radius: 20px;
   padding: 10px 10px 10px 10px;
+  margin: 0px 10px 10px 10px;
 }
 div.row {
   margin: 0px 20px 0px 20px;
