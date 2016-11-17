@@ -2,13 +2,16 @@
  * GET home page.
  */
 import express = require('express');
+import market_routes = require('./market-routes');
+import trade_routes = require('./trade-routes');
 
+// GENERAL 
 export function login(req: express.Request, res: express.Response) {
     res.render('login', { title: 'Login', year: new Date().getFullYear() });
 };
 
-export function index(req: express.Request, res: express.Response) {
-    res.render('index', { title: 'Home', year: new Date().getFullYear() });
+export function general_panel(req: express.Request, res: express.Response) {
+    res.render('index', { title: 'Panel General', year: new Date().getFullYear() });
 };
 
 export function about(req: express.Request, res: express.Response) {
@@ -18,3 +21,10 @@ export function about(req: express.Request, res: express.Response) {
 export function contact(req: express.Request, res: express.Response) {
     res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Contact page' });
 };
+
+
+export function markets(req: express.Request, res: express.Response) { market_routes.markets(req, res); };
+export function specific_market(req: express.Request, res: express.Response) { market_routes.specific_market(req, res); };
+
+export function trades(req: express.Request, res: express.Response) { trade_routes.trades(req, res); };
+export function advanced_trades(req: express.Request, res: express.Response) { trade_routes.advanced_trades(req, res); };

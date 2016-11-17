@@ -22,7 +22,9 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 app.get('/', routes.login);
-app.get('/home', routes.index);
+app.get('/general_panel', routes.general_panel);
+app.get('/markets', routes.markets);
+app.get('/market/*', routes.specific_market);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 http.createServer(app).listen(app.get('port'), function () {
