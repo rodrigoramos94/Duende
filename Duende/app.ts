@@ -16,8 +16,6 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
 
-import stylus = require('stylus');
-app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
@@ -31,7 +29,7 @@ app.get('/markets', routes.markets);
 app.get('/market/*', routes.specific_market);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
-//app.get('/*', routes.error404);
+//app.get('*', routes.error404);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

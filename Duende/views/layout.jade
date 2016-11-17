@@ -8,15 +8,16 @@ html
     link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
     script(src='/javascripts/modernizr-2.6.2.js')
+    block head
   body
     .navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
+          img(src='../images/duende-icon.png' alt='Logo Image' width='50px' heigth='50px')
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          img(src='../images/duende-icon.png' alt='Logo Image' width='50px' heigth='50px')
           a.navbar-brand(href='/') CloverElf
         .navbar-collapse.collapse
           ul.nav.navbar-nav

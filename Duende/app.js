@@ -1,8 +1,8 @@
 "use strict";
-const express = require('express');
-const routes = require('./routes/index');
-const http = require('http');
-const path = require('path');
+var express = require('express');
+var routes = require('./routes/index');
+var http = require('http');
+var path = require('path');
 var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
@@ -14,8 +14,6 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-const stylus = require('stylus');
-app.use(stylus.middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 // development only
 if ('development' == app.get('env')) {
@@ -27,7 +25,7 @@ app.get('/markets', routes.markets);
 app.get('/market/*', routes.specific_market);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
-//app.get('/*', routes.error404);
+//app.get('*', routes.error404);
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
 });
