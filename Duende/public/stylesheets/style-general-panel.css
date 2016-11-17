@@ -1,0 +1,12 @@
+﻿
+div.carousel-inner{
+    max-height: 350px;
+}
+
+img.img-carousel{
+    width: auto;
+}
+
+h2{
+    font-weight: bold;
+}
