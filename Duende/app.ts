@@ -26,11 +26,12 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.login);
-app.get('/general_panel', routes.general_panel);
+app.get('/general-panel', routes.general_panel);
 app.get('/markets', routes.markets);
 app.get('/market/*', routes.specific_market);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
+//app.get('/*', routes.error404);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));

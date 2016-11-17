@@ -1,16 +1,11 @@
 "use strict";
 var market_routes = require('./market-routes');
 var trade_routes = require('./trade-routes');
-// GENERAL 
+// STATIC PAGES
 function login(req, res) {
     res.render('login', { title: 'Login', year: new Date().getFullYear() });
 }
 exports.login = login;
-;
-function general_panel(req, res) {
-    res.render('index', { title: 'Panel General', year: new Date().getFullYear() });
-}
-exports.general_panel = general_panel;
 ;
 function about(req, res) {
     res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Description page' });
@@ -21,6 +16,16 @@ function contact(req, res) {
     res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Contact page' });
 }
 exports.contact = contact;
+;
+function error404(req, res) {
+    res.render('error404', { title: 'Not Found', year: new Date().getFullYear(), message: 'Not Found page' });
+}
+exports.error404 = error404;
+;
+function general_panel(req, res) {
+    res.render('general-panel', { title: 'Panel General', year: new Date().getFullYear() });
+}
+exports.general_panel = general_panel;
 ;
 function markets(req, res) { market_routes.markets(req, res); }
 exports.markets = markets;

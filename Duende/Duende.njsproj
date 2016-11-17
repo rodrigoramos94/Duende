@@ -84,6 +84,7 @@
     <Content Include="README.md" />
     <Content Include="views\contact.jade" />
     <Content Include="views\about.jade" />
+    <Content Include="views\error404.jade" />
     <Content Include="views\general-panel.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="views\login.jade" />

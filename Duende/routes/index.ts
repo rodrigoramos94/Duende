@@ -5,23 +5,24 @@ import express = require('express');
 import market_routes = require('./market-routes');
 import trade_routes = require('./trade-routes');
 
-// GENERAL 
+// STATIC PAGES
 export function login(req: express.Request, res: express.Response) {
     res.render('login', { title: 'Login', year: new Date().getFullYear() });
 };
-
-export function general_panel(req: express.Request, res: express.Response) {
-    res.render('index', { title: 'Panel General', year: new Date().getFullYear() });
-};
-
 export function about(req: express.Request, res: express.Response) {
     res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Description page' });
 };
-
 export function contact(req: express.Request, res: express.Response) {
     res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Contact page' });
 };
+export function error404(req: express.Request, res: express.Response) {
+    res.render('error404', { title: 'Not Found', year: new Date().getFullYear(), message: 'Not Found page' });
+};
 
+
+export function general_panel(req: express.Request, res: express.Response) {
+    res.render('general-panel', { title: 'Panel General', year: new Date().getFullYear() });
+};
 
 export function markets(req: express.Request, res: express.Response) { market_routes.markets(req, res); };
 export function specific_market(req: express.Request, res: express.Response) { market_routes.specific_market(req, res); };

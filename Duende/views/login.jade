@@ -10,8 +10,6 @@ html
     script(src='/javascripts/modernizr-2.6.2.js')
   
   body
-
-
     div#general-box.container.col-10-xs 
         div#image-box.container
             img.img-responsive(src='../images/duende-icon.png' alt='Logo Image' width='150px')
@@ -21,7 +19,7 @@ html
             div.row
                 h2 Login
                 hr
-                form(submit='/home')
+                form(action="/general-panel" method="get" enctype="multipart/form-data")
                     div.input-group.input-group-lg
                         span.input-group-addon(id='input-username')
                             img(src='../images/user-icon-24.png' alt='user' width='22px')
