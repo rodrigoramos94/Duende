@@ -10,23 +10,42 @@ html
     script(src='/javascripts/modernizr-2.6.2.js')
     block head
   body
-    .navbar.navbar-inverse.navbar-fixed-top
+    .navbar.navbar-inverse.navbar-static-top
       .container
         .navbar-header
-          img(src='../images/duende-icon.png' alt='Logo Image' width='50px' heigth='50px')
+          a.navbar-brand(href='/home') Clover Elf
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
             span.icon-bar
             span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='/') CloverElf
+            span.icon-bar  
+            span.icon-bar 
         .navbar-collapse.collapse
-          ul.nav.navbar-nav
-            li
-              a(href='/general_panel') Panel General
-            li
-              a(href='/about') Sobre Nosotros
-            li
-              a(href='/contact') Contacto
+            ul.nav.navbar-nav
+                li.active
+                    a(href='/markets') Mercados
+                li
+                    a(href='/trades') Operaciones
+                li
+                    a(href='/about') Sobre Nosotros
+                li
+                    a(href='/contact') Contacto
+            ul.nav.navbar-nav.navbar-right
+                li
+                    a(href='/') 
+                        span.glyphicon.glyphicon-user
+                        |   Bienevenido, #{username}
+                li.dropdown
+                    a.dropdown-toggle(data-toggle="dropdown" href="#")
+                        span.glyphicon.glyphicon-cog
+                        span.caret
+                    ul.dropdown-menu
+                      li
+                        a(href="#") Page 1-1
+                      li
+                        a(href="#") Page 1-2
+                      li
+                        a(href="#") Page 1-3 
+                        
     .container.body-content
       block content
       hr
