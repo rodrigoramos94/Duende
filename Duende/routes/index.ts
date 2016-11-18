@@ -16,12 +16,12 @@ export function contact(req: express.Request, res: express.Response) {
     res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Contact page' });
 };
 export function error404(req: express.Request, res: express.Response) {
-    res.render('error404', { title: 'Not Found', year: new Date().getFullYear(), message: 'Not Found page' });
+    res.render('error404', 404);
 };
 
 
-export function general_panel(req: express.Request, res: express.Response) {
-    res.render('general-panel', { title: 'Panel General', year: new Date().getFullYear() });
+export function home(req: express.Request, res: express.Response) {
+    res.render('home', { title: 'Home', year: new Date().getFullYear() });
 };
 
 export function markets(req: express.Request, res: express.Response) { market_routes.markets(req, res); };

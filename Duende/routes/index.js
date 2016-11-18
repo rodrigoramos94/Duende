@@ -18,14 +18,14 @@ function contact(req, res) {
 exports.contact = contact;
 ;
 function error404(req, res) {
-    res.render('error404', { title: 'Not Found', year: new Date().getFullYear(), message: 'Not Found page' });
+    res.render('error404', 404);
 }
 exports.error404 = error404;
 ;
-function general_panel(req, res) {
-    res.render('general-panel', { title: 'Panel General', year: new Date().getFullYear() });
+function home(req, res) {
+    res.render('home', { title: 'Home', year: new Date().getFullYear() });
 }
-exports.general_panel = general_panel;
+exports.home = home;
 ;
 function markets(req, res) { market_routes.markets(req, res); }
 exports.markets = markets;

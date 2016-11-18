@@ -20,9 +20,10 @@ if ('development' == app.get('env')) {
     app.use(express.errorHandler());
 }
 app.get('/', routes.login);
-app.get('/general-panel', routes.general_panel);
+app.get('/home', routes.home);
 app.get('/markets', routes.markets);
 app.get('/market/*', routes.specific_market);
+app.get('/trades', routes.trades);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
 //app.get('*', routes.error404);

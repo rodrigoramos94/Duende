@@ -1,6 +1,6 @@
 "use strict";
 function trades(req, res) {
-    res.render('trades', { title: 'Panel de Mercados', year: new Date().getFullYear() });
+    res.render('trades', { title: 'Panel de Operaciones', year: new Date().getFullYear() });
 }
 exports.trades = trades;
 ;
