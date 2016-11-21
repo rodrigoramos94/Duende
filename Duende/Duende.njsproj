@@ -37,11 +37,15 @@
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="routes\market-routes.ts" />
     <TypeScriptCompile Include="routes\trade-routes.ts" />
+    <TypeScriptCompile Include="Scripts\security\user_security.ts" />
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\stylus\stylus.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="public\images\background.jpg" />
+    <Content Include="public\images\negative_trend.svg" />
+    <Content Include="public\images\positive_trend.svg" />
     <Content Include="public\images\Ralph.png" />
     <Content Include="public\images\user-anonimo.png" />
     <Content Include="public\images\duende-icon.ico" />
@@ -78,6 +82,7 @@
     <Content Include="public\javascripts\jquery-1.10.2.min.map" />
     <Content Include="public\stylesheets\bootstrap.css" />
     <Content Include="public\stylesheets\bootstrap.min.css" />
+    <Content Include="public\stylesheets\style-home.css" />
     <Content Include="public\stylesheets\style-markets.css" />
     <Content Include="README.md" />
     <Content Include="views\contact.jade" />
@@ -97,6 +102,9 @@
     <Folder Include="public\stylesheets\" />
     <Folder Include="routes\" />
     <Folder Include="Scripts\" />
+    <Folder Include="Scripts\doc_generator\" />
+    <Folder Include="Scripts\mongodb\" />
+    <Folder Include="Scripts\security\" />
     <Folder Include="Scripts\typings\" />
     <Folder Include="Scripts\typings\express\" />
     <Folder Include="Scripts\typings\node\" />

@@ -4,6 +4,56 @@ block head
     link(rel='stylesheet', type='text/css', href='/stylesheets/style-home.css')
 
 block content
-    
-
+    br
+    br
+    div#personal_box.container
+        if is_premium
+            h2.center-text Hola #{user_name}, esta es tu situación actual
+            .row
+                .col-md-6
+                    p PRUEBA PRUEBA PRUENAB
+                .col-md-6
+                    p prueba prueba prueba
+        else
+            h2.center-text Hola #{user_name}, esta es tu situación actual
+            .row
+                .col-md-6
+                    p PRUEBA PRUEBA PRUENAB
+                .col-md-6
+                    p prueba prueba prueba
+    hr.divisoria
+    div#indexes_box
+        h2 Índices Bursátiles
+        ul.nav.nav-pills
+            li.active
+                a(data-toggle='tab' href='#chart') Gráfica
+            li
+                a(data-toggle='tab' href='#table') Tabla
+        .tab-content
+            div#chart.tab-pane.fade.in.active
+                // Grafica
+                for val in index_list
+                    .col-sm-3.col-xs-6
+                        h3.index-name #{val.name}
+                        if val.value > 0
+                            img.center-image.img-responsive(src='../images/positive_trend.svg')
+                            h3.index-pos-value #{val.value} %
+                        else
+                            img.center-image.img-responsive(src='../images/negative_trend.svg')
+                            h3.index-neg-value #{val.value} %
+            div#table.tab-pane.fade
+                // Tabla
+                div.table-responsive
+                    table.table.table-striped
+                        thead
+                            tr
+                                th Nombre
+                                th Description
+                                th Valor
+                        tbody
+                            for val in index_list
+                                tr
+                                    td #{val.name}
+                                    td #{val.description}
+                                    td #{val.value} %
 block scripts
