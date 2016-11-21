@@ -10,10 +10,11 @@ html
     script(src='/javascripts/modernizr-2.6.2.js')
     block head
   body
-    .navbar.navbar-inverse.navbar-fixed-top
-      .container
+    #navbar.navbar.navbar-inverse.navbar-fixed-top
+      #navbar-container.container-fluid
         .navbar-header
-          a.navbar-brand(href='/home') Clover Elf
+          a#brand-logo.navbar-brand(href='/home')
+            img.img-responsive(src='../images/trebol4.png' width='40px' heigth='40px')
           button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
             span.icon-bar
             span.icon-bar
@@ -51,11 +52,12 @@ html
                 else
                     li
                         a(href='/contact') Contacto
+            hr.visible-xs
             ul.nav.navbar-nav.navbar-right
                 li
                     a(href='/') 
                         span.glyphicon.glyphicon-user
-                        |   Bienevenido, #{username}
+                        |   Bienvenido, #{username}
                 li.dropdown
                     a.dropdown-toggle(data-toggle="dropdown" href="#")
                         span.glyphicon.glyphicon-cog
@@ -68,11 +70,12 @@ html
                       li
                         a(href="#") Page 1-3 
                         
-    .container.body-content
+    #body-container.container.body-content
       block content
-      hr
+      br
+      hr.divisoria
       footer
-        p &copy; #{year} - My Express Application
+        p &copy; #{year} - Clover Elf Trading
 
     script(src='/javascripts/jquery-1.10.2.js')
     script(src='/javascripts/bootstrap.js')
