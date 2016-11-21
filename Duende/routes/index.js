@@ -22,8 +22,27 @@ function error404(req, res) {
 }
 exports.error404 = error404;
 ;
+var index_list = [
+    {
+        name: 'IBEX-35',
+        value: +5.38,
+        description: 'Mercado Español'
+    }, {
+        name: 'NASDAQ',
+        value: -1.87,
+        description: 'Mercado amerciano'
+    }, {
+        name: 'DAX-50',
+        value: -2.41,
+        description: 'Mercado aleman'
+    }, {
+        name: 'NIKKEI-225',
+        value: 0.79,
+        description: 'Mercado japones'
+    }
+];
 function home(req, res) {
-    res.render('home', { title: 'Home', year: new Date().getFullYear() });
+    res.render('home', { title: 'Home', user_name: 'Rodrigo', index_list: index_list, year: new Date().getFullYear() });
 }
 exports.home = home;
 ;
