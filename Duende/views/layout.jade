@@ -10,7 +10,7 @@ html
     script(src='/javascripts/modernizr-2.6.2.js')
     block head
   body
-    .navbar.navbar-inverse.navbar-static-top
+    .navbar.navbar-inverse.navbar-fixed-top
       .container
         .navbar-header
           a.navbar-brand(href='/home') Clover Elf
@@ -21,14 +21,36 @@ html
             span.icon-bar 
         .navbar-collapse.collapse
             ul.nav.navbar-nav
-                li.active
-                    a(href='/markets') Mercados
-                li
-                    a(href='/trades') Operaciones
-                li
-                    a(href='/about') Sobre Nosotros
-                li
-                    a(href='/contact') Contacto
+                if title == "Home"
+                    li.active
+                        a(href='/home') Home
+                else
+                    li
+                        a(href='/home') Home
+                if title == "Panel de Mercados"
+                    li.active
+                        a(href='/markets') Mercados
+                else
+                    li
+                        a(href='/markets') Mercados 
+                if title == "Panel de Operaciones"
+                    li.active
+                        a(href='/trades') Operaciones
+                else
+                    li
+                        a(href='/trades') Operaciones
+                if title == "About"
+                    li.active
+                        a(href='/about') Sobre Nosotros
+                else
+                    li
+                        a(href='/about') Sobre Nosotros
+                if title == "Contact"
+                    li.active
+                        a(href='/contact') Contacto
+                else
+                    li
+                        a(href='/contact') Contacto
             ul.nav.navbar-nav.navbar-right
                 li
                     a(href='/') 
