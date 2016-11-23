@@ -14,17 +14,3 @@
     border-radius: 5px 5px 0px 0px;
     background-color: #c4d4c4;
 }
-.index-name{
-    text-align: center;
-    font-style: italic;
-}
-.index-pos-value{
-    text-align: center;
-    font-weight: bold;
-    color: forestgreen;
-}
-.index-neg-value{
-    text-align: center;
-    font-weight: bold;
-    color: darkred;
-}

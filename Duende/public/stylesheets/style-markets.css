@@ -6,7 +6,24 @@ div.carousel-inner{
 img.img-carousel{
     width: auto;
 }
-
 h2{
     font-weight: bold;
+}
+.index-name{
+    text-align: center;
+    font-style: italic;
+}
+.index-pos-value{
+    text-align: center;
+    font-weight: bold;
+    color: forestgreen;
+}
+.index-neg-value{
+    text-align: center;
+    font-weight: bold;
+    color: darkred;
+}
+.index-image{
+    align-content: center;
+    width: 150px;
 }

@@ -47,6 +47,7 @@
     <Content Include="public\images\negative_trend.svg" />
     <Content Include="public\images\positive_trend.svg" />
     <Content Include="public\images\Ralph.png" />
+    <Content Include="public\images\trebol4.ico" />
     <Content Include="public\images\user-anonimo.png" />
     <Content Include="public\images\duende-icon.ico" />
     <Content Include="public\images\duende-icon.png" />

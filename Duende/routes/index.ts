@@ -16,31 +16,13 @@ export function contact(req: express.Request, res: express.Response) {
     res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Contact page' });
 };
 export function error404(req: express.Request, res: express.Response) {
-    res.render('error404', 404);
+    res.render('error404', { title: 'Not Found', year: new Date().getFullYear(), message: 'Error page' });
 };
 
-var index_list = [
-    {
-        name: 'IBEX-35',
-        value: +5.38,
-        description: 'Mercado Español'
-    }, {
-        name: 'NASDAQ',
-        value: -1.87,
-        description: 'Mercado amerciano'
-    }, {
-        name: 'DAX-50',
-        value: -2.41,
-        description: 'Mercado aleman'
-    }, {
-        name: 'NIKKEI-225',
-        value: 0.79,
-        description: 'Mercado japones'
-    }
-];
+
 
 export function home(req: express.Request, res: express.Response) {
-    res.render('home', { title: 'Home', user_name: 'Rodrigo', index_list, year: new Date().getFullYear() });
+    res.render('home', { title: 'Home', user_name: 'Rodrigo', year: new Date().getFullYear() });
 };
 
 export function markets(req: express.Request, res: express.Response) { market_routes.markets(req, res); };
