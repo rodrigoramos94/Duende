@@ -33,19 +33,18 @@ block content
             span.sr-only Next
     hr.divisoria
     // PRINCIPAL MARKETS INDEXES
-    div#indexes_box
+    div#indexes-box
         h2 Índices Bursátiles
-        div#chart.row
+        .row
             // Grafica
             for val in index_list
-                .col-sm-3.col-xs-6
-                    h3.index-name #{val.name}
+                div(onclick="location.href='/market/#{val.name}'").cards.col-sm-3.col-xs-6
+                    h3.index-name.center-text #{val.name}
                     if val.growth > 0
                         img.index-image.img-responsive.center-image(src='../images/positive_trend.svg')
-                        h4.center-text #{val.value}
-                        h4.index-pos-value ( #{val.growth} % )
+                        h3.index-pos-value.center-text ( #{val.growth} % )
                     else
                         img.index-image.img-responsive.center-image(src='../images/negative_trend.svg')
-                        h3.index-neg-value ( #{val.growth} % )
+                        h3.index-neg-value.center-text ( #{val.growth} % )
 
 block scripts
