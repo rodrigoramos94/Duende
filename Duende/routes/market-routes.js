@@ -1,33 +1,8 @@
 "use strict";
-var index_list = [
-    {
-        name: 'IBEX-35',
-        symbol: '^IBEX',
-        growth: 5.38,
-        value: 10.892,
-        description: 'Mercado Español'
-    }, {
-        name: 'NASDAQ',
-        symbol: '^NASDAQ',
-        growth: -1.87,
-        value: 18.931,
-        description: 'Mercado amerciano'
-    }, {
-        name: 'DAX-50',
-        symbol: '^DAX',
-        growth: -2.41,
-        value: 12.374,
-        description: 'Mercado aleman'
-    }, {
-        name: 'NIKKEI-225',
-        symbol: '^NIKKEI',
-        growth: 0.79,
-        value: 4.859,
-        description: 'Mercado japones'
-    }
-];
+const data = require('../Scripts/data-test');
+var indexes_list = data.indexes_list;
 function markets(req, res) {
-    res.render('markets', { title: 'Panel de Mercados', index_list: index_list, year: new Date().getFullYear() });
+    res.render('markets', { title: 'Panel de Mercados', indexes_list: indexes_list, year: new Date().getFullYear() });
 }
 exports.markets = markets;
 ;

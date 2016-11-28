@@ -1,8 +1,8 @@
 "use strict";
-var express = require('express');
-var routes = require('./routes/index');
-var http = require('http');
-var path = require('path');
+const express = require('express');
+const routes = require('./routes/index');
+const http = require('http');
+const path = require('path');
 var app = express();
 // all environments
 app.set('port', process.env.PORT || 3000);

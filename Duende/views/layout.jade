@@ -5,9 +5,18 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title #{title} - CloverElf
     link(rel='shotcut icon' href='../images/trebol4.ico')
+    
+    // Am-Charts Resources
+    script(src="https://www.amcharts.com/lib/3/amcharts.js")
+    script(src="https://www.amcharts.com/lib/3/serial.js")
+    script(src="https://www.amcharts.com/lib/3/plugins/export/export.min.js")
+    link(rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all")
+    script(src="https://www.amcharts.com/lib/3/themes/light.js")
+    
     link(rel='stylesheet', type='text/css', href='/stylesheets/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/style.css')
     script(src='/javascripts/modernizr-2.6.2.js')
+    
     block head
   body
     #navbar.navbar.navbar-inverse.navbar-fixed-top
@@ -57,7 +66,7 @@ html
                 li
                     a(href='/') 
                         span.glyphicon.glyphicon-user
-                        |   Bienvenido, #{username}
+                        |   Bienvenido, #{user_name}
                 li.dropdown
                     a.dropdown-toggle(data-toggle="dropdown" href="#")
                         span.glyphicon.glyphicon-cog
@@ -75,7 +84,11 @@ html
       br
       hr.divisoria
       footer
-        p &copy; #{year} - Clover Elf Trading
+        .col-sm-6 
+            p &copy; #{year} - Clover Elf Trading
+        .col-sm-6-.pull-right
+            button.btn-link(href='/about') Sobre Nosotros
+            button.btn-link(href='/contact') Contacto
 
     script(src='/javascripts/jquery-1.10.2.js')
     script(src='/javascripts/bootstrap.js')
