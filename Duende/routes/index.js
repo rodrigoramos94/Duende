@@ -1,29 +1,31 @@
 "use strict";
 const market_routes = require('./market-routes');
 const trade_routes = require('./trade-routes');
+const data = require('../Scripts/data-test');
 // STATIC PAGES
 function login(req, res) {
-    res.render('login', { title: 'Login', year: new Date().getFullYear() });
+    res.render('login', { title: 'Login', user: user, year: new Date().getFullYear() });
 }
 exports.login = login;
 ;
 function about(req, res) {
-    res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Description page' });
+    res.render('about', { title: 'About', user: user, year: new Date().getFullYear(), message: 'Description page' });
 }
 exports.about = about;
 ;
 function contact(req, res) {
-    res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Contact page' });
+    res.render('contact', { title: 'Contact', user: user, year: new Date().getFullYear(), message: 'Contact page' });
 }
 exports.contact = contact;
 ;
 function error404(req, res) {
-    res.render('error404', { title: 'Not Found', year: new Date().getFullYear(), message: 'Error page' });
+    res.render('error404', { title: 'Not Found', user: user, year: new Date().getFullYear(), message: 'Error page' });
 }
 exports.error404 = error404;
 ;
+var user = data.user;
 function home(req, res) {
-    res.render('home', { title: 'Home', user_name: 'Rodrigo', year: new Date().getFullYear() });
+    res.render('home', { title: 'Home', user: user, year: new Date().getFullYear() });
 }
 exports.home = home;
 ;

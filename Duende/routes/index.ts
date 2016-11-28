@@ -4,25 +4,26 @@
 import express = require('express');
 import market_routes = require('./market-routes');
 import trade_routes = require('./trade-routes');
+import data = require('../Scripts/data-test');
 
 // STATIC PAGES
 export function login(req: express.Request, res: express.Response) {
-    res.render('login', { title: 'Login', year: new Date().getFullYear() });
+    res.render('login', { title: 'Login', user, year: new Date().getFullYear() });
 };
 export function about(req: express.Request, res: express.Response) {
-    res.render('about', { title: 'About', year: new Date().getFullYear(), message: 'Description page' });
+    res.render('about', { title: 'About', user, year: new Date().getFullYear(), message: 'Description page' });
 };
 export function contact(req: express.Request, res: express.Response) {
-    res.render('contact', { title: 'Contact', year: new Date().getFullYear(), message: 'Contact page' });
+    res.render('contact', { title: 'Contact', user, year: new Date().getFullYear(), message: 'Contact page' });
 };
 export function error404(req: express.Request, res: express.Response) {
-    res.render('error404', { title: 'Not Found', year: new Date().getFullYear(), message: 'Error page' });
+    res.render('error404', { title: 'Not Found', user, year: new Date().getFullYear(), message: 'Error page' });
 };
 
-
+var user = data.user;
 
 export function home(req: express.Request, res: express.Response) {
-    res.render('home', { title: 'Home', user_name: 'Rodrigo', year: new Date().getFullYear() });
+    res.render('home', { title: 'Home', user, year: new Date().getFullYear() });
 };
 
 export function markets(req: express.Request, res: express.Response) { market_routes.markets(req, res); };
