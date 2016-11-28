@@ -1,4 +1,4 @@
-var chart = AmCharts.makeChart("treasure-chart", {
+﻿var chart = AmCharts.makeChart("treasure-chart", {
     "type": "serial",
     "theme": "light",
     "marginRight": 40,
@@ -7,33 +7,33 @@ var chart = AmCharts.makeChart("treasure-chart", {
     "mouseWheelZoomEnabled": true,
     "dataDateFormat": "YYYY-MM-DD",
     "valueAxes": [{
-            "id": "v1",
-            "axisAlpha": 0,
-            "position": "left",
-            "ignoreAxisWidth": true
-        }],
+        "id": "v1",
+        "axisAlpha": 0,
+        "position": "left",
+        "ignoreAxisWidth": true
+    }],
     "balloon": {
         "borderThickness": 1,
         "shadowAlpha": 0
     },
     "graphs": [{
-            "id": "g1",
-            "balloon": {
-                "drop": true,
-                "adjustBorderColor": false,
-                "color": "#ffffff"
-            },
-            "bullet": "round",
-            "bulletBorderAlpha": 1,
-            "bulletColor": "#FFFFFF",
-            "bulletSize": 5,
-            "hideBulletsCount": 50,
-            "lineThickness": 2,
-            "title": "red line",
-            "useLineColorForBulletBorder": true,
-            "valueField": "value",
-            "balloonText": "<span style='font-size:18px;'>[[value]]</span>"
-        }],
+        "id": "g1",
+        "balloon": {
+            "drop": true,
+            "adjustBorderColor": false,
+            "color": "#ffffff"
+        },
+        "bullet": "round",
+        "bulletBorderAlpha": 1,
+        "bulletColor": "#FFFFFF",
+        "bulletSize": 5,
+        "hideBulletsCount": 50,
+        "lineThickness": 2,
+        "title": "red line",
+        "useLineColorForBulletBorder": true,
+        "valueField": "value",
+        "balloonText": "<span style='font-size:18px;'>[[value]]</span>"
+    }],
     "chartScrollbar": {
         "graph": "g1",
         "oppositeAxis": false,
@@ -69,9 +69,9 @@ var chart = AmCharts.makeChart("treasure-chart", {
         "enabled": true
     },
     "dataProvider": [{
-            "date": "2012-07-27",
-            "value": 13
-        }, {
+        "date": "2012-07-27",
+        "value": 13
+    }, {
             "date": "2012-07-28",
             "value": 11
         }, {
@@ -634,9 +634,11 @@ var chart = AmCharts.makeChart("treasure-chart", {
             "value": 81
         }]
 });
+
 chart.addListener("rendered", zoomChart);
+
 zoomChart();
+
 function zoomChart() {
     chart.zoomToIndexes(chart.dataProvider.length - 40, chart.dataProvider.length - 1);
 }
-//# sourceMappingURL=home-chart1.js.map

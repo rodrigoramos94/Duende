@@ -2,26 +2,26 @@
 
 block head
     link(rel='stylesheet', type='text/css', href='/stylesheets/style-home.css')
+    script(src='/javascripts/modernizr-2.6.2.js')
+    script(src='/javascripts/home-chart1.js')    
 
 block content
     br
     br
-    div#personal_box.container
-        if is_premium
-            h2.center-text Hola #{user_name}, esta es tu situación actual
-            .row
-                .col-md-6
-                    p PRUEBA PRUEBA PRUENAB
-                .col-md-6
-                    p prueba prueba prueba
-        else
-            h2.center-text Hola #{user_name}, esta es tu situación actual
-            .row
-                .col-md-6
-                    p PRUEBA PRUEBA PRUENAB
-                .col-md-6
-                    p prueba prueba prueba
+    #personal-box.container
+        h2.center-text Hola #{user.name}, esta es tu situación actual
+        br
+        .row
+            .col-md-6
+                p PRUEBA PRUEBA PRUENAB
+            .col-md-6
+                p prueba prueba prueba
+
     hr.divisoria
-    
+    #treasure-box
+        h2.container Tu Tesoro
+        #treasure-chart
+    hr.divisoria
+
 
 block scripts
