@@ -1,4 +1,2 @@
-c:\users\rodrigo ramos\documents\visual studio 2015\Projects\Duende\Duende\bin\Microsoft.NodejsTools.WebRole.dll
 C:\Users\RRamos\Documents\Visual Studio 2015\Projects\Duende\Duende\obj\Debug\Duende.njsprojResolveAssemblyReference.cache
 C:\Users\RRamos\Documents\Visual Studio 2015\Projects\Duende\Duende\bin\Microsoft.NodejsTools.WebRole.dll
-C:\Users\Rodrigo Ramos\Documents\Visual Studio 2015\Projects\Duende\Duende\obj\Debug\Duende.njsprojResolveAssemblyReference.cache

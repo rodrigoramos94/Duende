@@ -1,6 +1,6 @@
 "use strict";
-var market_routes = require('./market-routes');
-var trade_routes = require('./trade-routes');
+const market_routes = require('./market-routes');
+const trade_routes = require('./trade-routes');
 // STATIC PAGES
 function login(req, res) {
     res.render('login', { title: 'Login', year: new Date().getFullYear() });
