@@ -49,22 +49,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="public\images\background.jpg" />
+    <Content Include="public\images\fondo1.jpg" />
+    <Content Include="public\images\fondo2.jpg" />
+    <Content Include="public\images\fondo3.jpg" />
+    <Content Include="public\images\fondo4.jpg" />
+    <Content Include="public\images\fondo6.jpg" />
+    <Content Include="public\images\fondo8.jpg" />
+    <Content Include="public\images\fondo9.png" />
     <Content Include="public\images\negative_trend.svg" />
     <Content Include="public\images\positive_trend.svg" />
     <Content Include="public\images\Ralph.png" />
     <Content Include="public\images\trebol4.ico" />
-    <Content Include="public\images\user-anonimo.png" />
-    <Content Include="public\images\duende-icon.ico" />
-    <Content Include="public\images\duende-icon.png" />
-    <Content Include="public\images\fondo4.jpg" />
-    <Content Include="public\images\fondo5.jpg" />
-    <Content Include="public\images\fondo6.jpg" />
     <Content Include="public\images\fondo7.jpg" />
-    <Content Include="public\images\fondo8.jpg" />
     <Content Include="public\images\fondo9.jpg" />
     <Content Include="public\images\locker-lock-24.png" />
     <Content Include="public\images\trebol4.png" />
-    <Content Include="public\images\user-male-blue.png" />
     <Content Include="public\images\user-icon-24.png" />
     <Content Include="public\javascripts\bootstrap.js" />
     <Content Include="public\javascripts\bootstrap.min.js" />
