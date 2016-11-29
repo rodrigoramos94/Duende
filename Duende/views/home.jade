@@ -7,7 +7,6 @@ block head
 
 block content
     br
-    br
     #personal-box.container
         h2.center-text Hola #{user.name}, esta es tu situación actual
         br
@@ -19,8 +18,11 @@ block content
 
     hr.divisoria
     #treasure-box
-        h2.container Tu Tesoro
-        #treasure-chart
+        .container
+            h2 Tu Tesoro
+            span.subtitle Ingresos + Beneficios - Retiradas
+        br
+        #treasure-chart.container
     hr.divisoria
 
 

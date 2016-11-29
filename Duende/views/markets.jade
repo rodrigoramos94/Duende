@@ -1,20 +1,15 @@
 ﻿extends layout
 
 block head
+    link(rel='stylesheet', type='text/css', href='/stylesheets/ammaps-style1.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/style-markets.css')
-    
-    // Am-Charts Resources
-    script(src="https://www.amcharts.com/lib/3/amcharts.js")
-    script(src="https://www.amcharts.com/lib/3/serial.js")
-    script(src="https://www.amcharts.com/lib/3/plugins/export/export.min.js")
-    link(rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all")
-    script(src="https://www.amcharts.com/lib/3/themes/light.js")
+    script(src='/javascripts/markets-maps1.js')
 
 block content
-    h1#title #{title}
+    h2#title #{title}
     hr.divisoria
     // CAROUSEL
-    div.carousel.slide(id='myCarousel' data-ride='carousel')
+    div.carousel.slide(id='myCarousel' data-ride='carousel' data-interval='8000')
         // Indicators
         ol.carousel-indicators
             li.active(data-target='#myCarousel' data-slide-to='0')
@@ -24,13 +19,13 @@ block content
         // Wrapper for slides
         div.carousel-inner(role='listbox')
             div.item.active
-                img.img-carousel(src='../images/fondo8.jpg' alt='imagen')
+                h5#carousel-title1.center-text Repsol S.A.
             div.item
-                img.img-carousel(src='../images/fondo7.jpg' alt='imagen')
+                h5#carousel-title2.center-text OHL S.A.
             div.item
-                img.img-carousel(src='../images/fondo6.jpg' alt='imagen')
+                h5#carousel-title3.center-text Telefonica S.A.
             div.item
-                img.img-carousel(src='../images/fondo5.jpg' alt='imagen')
+                h5#carousel-title4.center-text Bankia S.A.
         // Left-Right controls
         a.left.carousel-control(href='#myCarousel' role='button' data-slide='prev')
             span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
@@ -40,22 +35,31 @@ block content
             span.sr-only Next
     hr.divisoria
     // PRINCIPAL MARKETS INDEXES
-    #indexes-box.container
-        h2 Índices Bursátiles
+    #indexes-box
+        h3 Índices Bursátiles
+        span.subtitle Crecimiento diario de los índices mas importantes
+        br
+        br
         .row
             // Grafica
             for val in indexes_list
                 .col-sm-3.col-xs-6
                     div(onclick="location.href='/market/#{val.name}'").cards
-                        h3.index-name.center-text #{val.name}
+                        h4.index-name.center-text #{val.name}
                         if val.growth > 0
                             img.index-image.img-responsive.center-image(src='../images/positive_trend.svg')
-                            h3.index-pos-value.center-text ( #{val.growth} % )
+                            h4.index-pos-value.center-text ( #{val.growth}% )
                         else
                             img.index-image.img-responsive.center-image(src='../images/negative_trend.svg')
-                            h3.index-neg-value.center-text ( #{val.growth} % )
-    
+                            h4.index-neg-value.center-text ( #{val.growth}% )
     hr.divisoria
-
+    // MAPAMUNDI INDEXES
+    #mapamundi-box
+        h3 Los Índices en el Mapa
+        span.subtitle Localización en el mundo de los índices mas importantes
+        br
+        br
+        #chartdiv
+    hr.divisoria
 
 block scripts

@@ -2,9 +2,13 @@
 div.carousel-inner{
     height: 300px;
 }
-
+.carousel-inner{
+    background-image: url(../images/fondo3.jpg);
+    background-size: 100%;
+}
 img.img-carousel{
     width: auto;
+    z-index: -1;
 }
 #indexes-box{
     margin-left: 10px;
@@ -32,5 +36,5 @@ img.img-carousel{
 }
 .index-image{
     align-content: center;
-    width: 150px;
+    width: 125px;
 }
