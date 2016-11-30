@@ -1,4 +1,4 @@
-﻿var map = AmCharts.makeChart("chartdiv", {
+﻿var map = AmCharts.makeChart("mapamundi-chart", {
     "type": "map",
     "theme": "light",
     "projection": "miller",
@@ -18,12 +18,12 @@
     "dataProvider": {
         "map": "worldLow",
         "images": [{
-            "zoomLevel": 5,
-            "scale": 0.5,
-            "title": "Brussels",
-            "latitude": 50.8371,
-            "longitude": 4.3676
-        }, {
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Brussels",
+                "latitude": 50.8371,
+                "longitude": 4.3676
+            }, {
                 "zoomLevel": 5,
                 "scale": 0.5,
                 "title": "Copenhagen",

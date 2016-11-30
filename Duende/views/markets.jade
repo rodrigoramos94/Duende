@@ -4,54 +4,66 @@ block head
     link(rel='stylesheet', type='text/css', href='/stylesheets/ammaps-style1.css')
     link(rel='stylesheet', type='text/css', href='/stylesheets/style-markets.css')
     script(src='/javascripts/markets-maps1.js')
+    script(src='/javascripts/markets-chart1.js')
+    script(src='/javascripts/markets.js')
 
 block content
     h2#title #{title}
     hr.divisoria
-    // CAROUSEL
-    div.carousel.slide(id='myCarousel' data-ride='carousel' data-interval='8000')
-        // Indicators
-        ol.carousel-indicators
-            li.active(data-target='#myCarousel' data-slide-to='0')
-            li(data-target='#myCarousel' data-slide-to='1')
-            li(data-target='#myCarousel' data-slide-to='2')
-            li(data-target='#myCarousel' data-slide-to='3')
-        // Wrapper for slides
-        div.carousel-inner(role='listbox')
-            div.item.active
-                h5#carousel-title1.center-text Repsol S.A.
-            div.item
-                h5#carousel-title2.center-text OHL S.A.
-            div.item
-                h5#carousel-title3.center-text Telefonica S.A.
-            div.item
-                h5#carousel-title4.center-text Bankia S.A.
-        // Left-Right controls
-        a.left.carousel-control(href='#myCarousel' role='button' data-slide='prev')
-            span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-            span.sr-only Previous
-        a.right.carousel-control(href='#myCarousel' role='button' data-slide='next')
-            span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-            span.sr-only Next
-    hr.divisoria
     // PRINCIPAL MARKETS INDEXES
     #indexes-box
-        h3 Índices Bursátiles
-        span.subtitle Crecimiento diario de los índices mas importantes
+        .container
+            h3 Índices Bursátiles
+            span.subtitle Crecimiento diario de los índices mas importantes
+            br
+            br
+            .row
+                // Grafica
+                for val in indexes_list
+                    .col-sm-3.col-xs-6
+                        div(onclick="location.href='/market/#{val.name}'").cards
+                            h4.index-name.center-text #{val.name}
+                            if val.growth > 0
+                                img.index-image.img-responsive.center-image(src='../images/positive_trend.svg')
+                                h4.index-pos-value.center-text ( #{val.growth}% )
+                            else
+                                img.index-image.img-responsive.center-image(src='../images/negative_trend.svg')
+                                h4.index-neg-value.center-text ( #{val.growth}% )
+    br
+    #random-stocks-box
+        h3 Valores de Empresas Españolas
+        span.subtitle Cotizaciones en Bolsa de algunas compañías del IBEX-35
+        br
+        #stocks-chart
+    hr.divisoria
+    #markets-list-box
+        h3 Listado de Mercados
+        span.subtitle Conjunto de los mercados disponibles
         br
         br
-        .row
-            // Grafica
-            for val in indexes_list
-                .col-sm-3.col-xs-6
-                    div(onclick="location.href='/market/#{val.name}'").cards
-                        h4.index-name.center-text #{val.name}
-                        if val.growth > 0
-                            img.index-image.img-responsive.center-image(src='../images/positive_trend.svg')
-                            h4.index-pos-value.center-text ( #{val.growth}% )
-                        else
-                            img.index-image.img-responsive.center-image(src='../images/negative_trend.svg')
-                            h4.index-neg-value.center-text ( #{val.growth}% )
+        .table-responsive
+            table.table.table-bordered.table-hover
+                thead
+                    th Name
+                    th Country
+                    th Value (€)
+                    th Age (years)
+                tbody
+                    tr(onclick="window.document.location='/market/Repsol'")
+                        td Repsol
+                        td España
+                        td 5,46
+                        td 87
+                    tr
+                        td OHL
+                        td España
+                        td 13,96
+                        td 32
+                    tr(onclick="window.document.location='/market/Telefonica'")
+                        td Telefonica
+                        td España
+                        td 8,24
+                        td 46
     hr.divisoria
     // MAPAMUNDI INDEXES
     #mapamundi-box
@@ -59,7 +71,5 @@ block content
         span.subtitle Localización en el mundo de los índices mas importantes
         br
         br
-        #chartdiv
-    hr.divisoria
-
+        #mapamundi-chart
 block scripts

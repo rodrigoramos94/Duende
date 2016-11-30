@@ -9,5 +9,5 @@ export function markets(req: express.Request, res: express.Response) {
 };
 
 export function specific_market(req: express.Request, res: express.Response) {
-    res.render('specific_market', { title: 'Mercado Especifico', user, year: new Date().getFullYear() });
+    res.render('market', { title: 'Mercado Especifico', user, year: new Date().getFullYear() });
 };

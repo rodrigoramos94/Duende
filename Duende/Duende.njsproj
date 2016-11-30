@@ -35,7 +35,9 @@
   <ItemGroup>
     <TypeScriptCompile Include="app.ts" />
     <TypeScriptCompile Include="public\javascripts\home-chart1.ts" />
+    <TypeScriptCompile Include="public\javascripts\markets-chart1.ts" />
     <TypeScriptCompile Include="public\javascripts\markets-maps1.ts" />
+    <TypeScriptCompile Include="public\javascripts\markets.ts" />
     <TypeScriptCompile Include="routes\index.ts" />
     <TypeScriptCompile Include="routes\market-routes.ts" />
     <TypeScriptCompile Include="routes\trade-routes.ts" />
@@ -90,6 +92,7 @@
     <Content Include="public\stylesheets\bootstrap.css" />
     <Content Include="public\stylesheets\bootstrap.min.css" />
     <Content Include="public\stylesheets\style-home.css" />
+    <Content Include="public\stylesheets\style-market.css" />
     <Content Include="public\stylesheets\style-markets.css" />
     <Content Include="README.md" />
     <Content Include="views\contact.jade" />
@@ -98,6 +101,7 @@
     <Content Include="views\home.jade" />
     <Content Include="views\layout.jade" />
     <Content Include="views\login.jade" />
+    <Content Include="views\market.jade" />
     <Content Include="views\markets.jade" />
     <Content Include="views\trades.jade" />
   </ItemGroup>

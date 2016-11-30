@@ -1,4 +1,4 @@
-var map = AmCharts.makeChart("chartdiv", {
+var map = AmCharts.makeChart("mapamundi-chart", {
     "type": "map",
     "theme": "light",
     "projection": "miller",

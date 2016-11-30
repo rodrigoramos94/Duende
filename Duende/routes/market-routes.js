@@ -8,7 +8,7 @@ function markets(req, res) {
 exports.markets = markets;
 ;
 function specific_market(req, res) {
-    res.render('specific_market', { title: 'Mercado Especifico', user: user, year: new Date().getFullYear() });
+    res.render('market', { title: 'Mercado Especifico', user: user, year: new Date().getFullYear() });
 }
 exports.specific_market = specific_market;
 ;

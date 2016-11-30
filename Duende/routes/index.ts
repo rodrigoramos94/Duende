@@ -1,6 +1,6 @@
 ﻿/*
- * GET home page.  
- */
+    * GET home page.  
+    */
 import express = require('express');
 import market_routes = require('./market-routes');
 import trade_routes = require('./trade-routes');
