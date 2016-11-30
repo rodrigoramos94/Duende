@@ -30,7 +30,7 @@ app.get('/market/*', routes.specific_market);
 app.get('/trades', routes.trades);
 app.get('/about', routes.about);
 app.get('/contact', routes.contact);
-//app.get('*', routes.error404);
+app.use(routes.error404);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log('Express server listening on port ' + app.get('port'));
