@@ -1,7 +1,14 @@
+/**
+ * Define SVG path for target icon
+ */
+var targetSVG = "M9,0C4.029,0,0,4.029,0,9s4.029,9,9,9s9-4.029,9-9S13.971,0,9,0z M9,15.93 c-3.83,0-6.93-3.1-6.93-6.93S5.17,2.07,9,2.07s6.93,3.1,6.93,6.93S12.83,15.93,9,15.93 M12.5,9c0,1.933-1.567,3.5-3.5,3.5S5.5,10.933,5.5,9S7.067,5.5,9,5.5 S12.5,7.067,12.5,9z";
+/**
+ * Create the map
+ */
 var map = AmCharts.makeChart("mapamundi-chart", {
     "type": "map",
+    "projection": "eckert3",
     "theme": "light",
-    "projection": "miller",
     "imagesSettings": {
         "rollOverColor": "#089282",
         "rollOverScale": 3,
@@ -10,166 +17,162 @@ var map = AmCharts.makeChart("mapamundi-chart", {
         "color": "#13564e"
     },
     "areasSettings": {
-        "unlistedAreasColor": "#15A892"
+        "unlistedAreasColor": "#15A892",
+        "outlineThickness": 0.1
     },
     "dataProvider": {
         "map": "worldLow",
         "images": [{
+                "svgPath": targetSVG,
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Vienna",
+                "latitude": 48.2092,
+                "longitude": 16.3728
+            }, {
+                "svgPath": targetSVG,
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Minsk",
+                "latitude": 53.9678,
+                "longitude": 27.5766
+            }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
                 "title": "Brussels",
                 "latitude": 50.8371,
                 "longitude": 4.3676
             }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
                 "title": "Copenhagen",
                 "latitude": 55.6763,
                 "longitude": 12.5681
             }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
                 "title": "Paris",
                 "latitude": 48.8567,
                 "longitude": 2.3510
             }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
-                "title": "Reykjavik",
-                "latitude": 64.1353,
-                "longitude": -21.8952
+                "title": "Berlin",
+                "latitude": 52.5235,
+                "longitude": 13.4115
             }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
-                "title": "Moscow",
-                "latitude": 55.7558,
-                "longitude": 37.6176
+                "title": "Rome",
+                "latitude": 41.8955,
+                "longitude": 12.4823
             }, {
+                "svgPath": targetSVG,
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Luxembourg",
+                "latitude": 49.6100,
+                "longitude": 6.1296
+            }, {
+                "svgPath": targetSVG,
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Amsterdam",
+                "latitude": 52.3738,
+                "longitude": 4.8910
+            }, {
+                "svgPath": targetSVG,
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Oslo",
+                "latitude": 59.9138,
+                "longitude": 10.7387
+            }, {
+                "svgPath": targetSVG,
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Lisbon",
+                "latitude": 38.7072,
+                "longitude": -9.1355
+            }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
                 "title": "Madrid",
                 "latitude": 40.4167,
                 "longitude": -3.7033
             }, {
+                "svgPath": targetSVG,
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Stockholm",
+                "latitude": 59.3328,
+                "longitude": 18.0645
+            }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
                 "title": "London",
                 "latitude": 51.5002,
-                "longitude": -0.1262,
-                "url": "http://www.google.co.uk"
+                "longitude": -0.1262
             }, {
-                "zoomLevel": 5,
-                "scale": 0.5,
-                "title": "Peking",
-                "latitude": 39.9056,
-                "longitude": 116.3958
-            }, {
-                "zoomLevel": 5,
-                "scale": 0.5,
-                "title": "New Delhi",
-                "latitude": 28.6353,
-                "longitude": 77.2250
-            }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
                 "title": "Tokyo",
                 "latitude": 35.6785,
-                "longitude": 139.6823,
-                "url": "http://www.google.co.jp"
+                "longitude": 139.6823
             }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
-                "title": "Ankara",
-                "latitude": 39.9439,
-                "longitude": 32.8560
+                "title": "Kuwait",
+                "latitude": 29.3721,
+                "longitude": 47.9824
             }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
-                "title": "Buenos Aires",
-                "latitude": -34.6118,
-                "longitude": -58.4173
+                "title": "Seoul",
+                "latitude": 37.5139,
+                "longitude": 126.9828
             }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
-                "title": "Brasilia",
-                "latitude": -15.7801,
-                "longitude": -47.9292
+                "title": "Bangkok",
+                "latitude": 13.7573,
+                "longitude": 100.5020
             }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
-                "title": "Ottawa",
-                "latitude": 45.4235,
-                "longitude": -75.6979
+                "title": "Abu Dhabi",
+                "latitude": 24.4764,
+                "longitude": 54.3705
             }, {
+                "svgPath": targetSVG,
+                "zoomLevel": 5,
+                "scale": 0.5,
+                "title": "Panama",
+                "latitude": 8.9943,
+                "longitude": -79.5188
+            }, {
+                "svgPath": targetSVG,
                 "zoomLevel": 5,
                 "scale": 0.5,
                 "title": "Washington",
                 "latitude": 38.8921,
                 "longitude": -77.0241
-            }, {
-                "zoomLevel": 5,
-                "scale": 0.5,
-                "title": "Kinshasa",
-                "latitude": -4.3369,
-                "longitude": 15.3271
-            }, {
-                "zoomLevel": 5,
-                "scale": 0.5,
-                "title": "Cairo",
-                "latitude": 30.0571,
-                "longitude": 31.2272
-            }, {
-                "zoomLevel": 5,
-                "scale": 0.5,
-                "title": "Pretoria",
-                "latitude": -25.7463,
-                "longitude": 28.1876
             }]
+    },
+    "export": {
+        "enabled": true
     }
 });
-// add events to recalculate map position when the map is moved or zoomed
-map.addListener("positionChanged", updateCustomMarkers);
-// this function will take current images on the map and create HTML elements for them
-function updateCustomMarkers(event) {
-    // get map object
-    var map = event.chart;
-    // go through all of the images
-    for (var x in map.dataProvider.images) {
-        // get MapImage object
-        var image = map.dataProvider.images[x];
-        // check if it has corresponding HTML element
-        if ('undefined' == typeof image.externalElement)
-            image.externalElement = createCustomMarker(image);
-        // reposition the element accoridng to coordinates
-        var xy = map.coordinatesToStageXY(image.longitude, image.latitude);
-        image.externalElement.style.top = xy.y + 'px';
-        image.externalElement.style.left = xy.x + 'px';
-    }
-}
-// this function creates and returns a new marker element
-function createCustomMarker(image) {
-    // create holder
-    var holder = document.createElement('div');
-    holder.className = 'map-marker';
-    holder.title = image.title;
-    holder.style.position = 'absolute';
-    // maybe add a link to it?
-    if (undefined != image.url) {
-        holder.onclick = function () {
-            window.location.href = image.url;
-        };
-        holder.className += ' map-clickable';
-    }
-    // create dot
-    var dot = document.createElement('div');
-    dot.className = 'dot';
-    holder.appendChild(dot);
-    // create pulse
-    var pulse = document.createElement('div');
-    pulse.className = 'pulse';
-    holder.appendChild(pulse);
-    // append the marker to the map container
-    image.chart.chartDiv.appendChild(holder);
-    return holder;
-}
 //# sourceMappingURL=markets-maps1.js.map
