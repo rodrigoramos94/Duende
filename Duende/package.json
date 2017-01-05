@@ -10,6 +10,7 @@
     "amcharts": "^3.14.5",
     "ammaps": "^3.14.5",
     "express": "3.4.4",
-    "jade": "*"
+    "jade": "*",
+    "mongoose": "^4.7.6"
   }
 }
