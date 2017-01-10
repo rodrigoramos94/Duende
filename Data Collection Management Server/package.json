@@ -1,0 +1,9 @@
+{
+  "name": "data-collection-management-server",
+  "version": "0.0.0",
+  "description": "Data Collection Management Server",
+  "main": "app.js",
+  "author": {
+    "name": "r.ramos"
+  }
+}
