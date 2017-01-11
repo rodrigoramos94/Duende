@@ -46,6 +46,7 @@
       <SubType>Code</SubType>
       <TestFramework>ExportRunner</TestFramework>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="Scripts\mongodb\mongodb.ts" />
     <TypeScriptCompile Include="Scripts\security\user_security.ts" />
     <TypeScriptCompile Include="Scripts\typings\express\express.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />

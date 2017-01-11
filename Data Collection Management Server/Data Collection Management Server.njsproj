@@ -36,10 +36,19 @@
     <TypeScriptCompile Include="app.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <TypeScriptCompile Include="Scripts\mongodb\mongodb-read.ts" />
+    <TypeScriptCompile Include="Scripts\mongodb\mongodb-write.ts" />
+    <TypeScriptCompile Include="Scripts\mongodb\mongodb.ts" />
+    <TypeScriptCompile Include="Scripts\oauth\oauth.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="Scripts\yql\yql.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\" />
+    <Folder Include="Scripts\mongodb\" />
+    <Folder Include="Scripts\yql\" />
+    <Folder Include="Scripts\rabbitmq\" />
+    <Folder Include="Scripts\oauth\" />
     <Folder Include="Scripts\typings\" />
     <Folder Include="Scripts\typings\node\" />
   </ItemGroup>
