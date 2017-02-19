@@ -1,35 +1,17 @@
-﻿import mongoose = require('mongoose')
+﻿import mongodb = require('./Scripts/mongodb/mongodb')
+import market_update = require('./Scripts/markets/marketUpdate_elf')
+import markets_controller = require('./Scripts/markets/marketsController_elf')
+import yql = require('./Scripts/yql/yql');
 
-
-console.log('Servidor Iniciado: Data Collection Management Server (DCMS)')
-
-/*  CONFIGURACIÓN de Conexiones
-**/
-console.log('Iniciando Configuración de conexiones (DCMS)')
+console.log('/////Iniciando Servidor: Data Collection Management Server (DCMS)')
 
 // conexion con MongoDB
-//mongodb.initMongo()
+console.log('/////Iniciando MongoDB')
+mongodb.connect(function (response) {
 
+    console.log('Ejecutando Servidor (DCMS)')
 
-console.log('Finalización de Configuración de conexiones (DCMS)')
-
-/*  CONFIGURACIÓN de Mercados
-**/
-console.log('Iniciando Configuración de mercados (DCMS)')
-
-setInterval(function () {
-    console.log('Timeout ')},
-2000);
-
-
-
-
-
-console.log('Finalización de Configuración de mercados (DCMS)')
-
-/*  EJECUCIÓN de 
-**/
-console.log('Ejecutando Servidor (DCMS)')
-
-
+    // INICIAMOS EL CONTROLADOR DE MERCADOS
+    markets_controller.run()
+})
 

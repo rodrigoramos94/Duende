@@ -36,16 +36,24 @@
     <TypeScriptCompile Include="app.ts" />
     <Content Include="package.json" />
     <Content Include="README.md" />
-    <TypeScriptCompile Include="Scripts\mongodb\mongodb-read.ts" />
-    <TypeScriptCompile Include="Scripts\mongodb\mongodb-write.ts" />
+    <TypeScriptCompile Include="Scripts\markets\marketsController_elf.ts" />
+    <TypeScriptCompile Include="Scripts\markets\marketUpdate_elf.ts" />
+    <TypeScriptCompile Include="Scripts\markets\prt_market_elf.ts" />
+    <TypeScriptCompile Include="Scripts\mongodb\models\dataset.ts" />
+    <TypeScriptCompile Include="Scripts\mongodb\models\market_info.ts" />
     <TypeScriptCompile Include="Scripts\mongodb\mongodb.ts" />
+    <TypeScriptCompile Include="Scripts\mongodb\mongodb_config.ts" />
+    <TypeScriptCompile Include="Scripts\mongodb\mongodb_queries.ts" />
     <TypeScriptCompile Include="Scripts\oauth\oauth.ts" />
     <TypeScriptCompile Include="Scripts\typings\node\node.d.ts" />
+    <TypeScriptCompile Include="Scripts\yql\yql-querycreator.ts" />
     <TypeScriptCompile Include="Scripts\yql\yql.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Scripts\" />
     <Folder Include="Scripts\mongodb\" />
+    <Folder Include="Scripts\markets\" />
+    <Folder Include="Scripts\mongodb\models\" />
     <Folder Include="Scripts\yql\" />
     <Folder Include="Scripts\rabbitmq\" />
     <Folder Include="Scripts\oauth\" />
